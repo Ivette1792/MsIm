@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #70061100;
+
+}
+body{
+    background-color: #700611;
+}
+
+.video-effect {
+    width: 50%;
+    height: 100vh; 
+    overflow: hidden;
+  }
+  
+  .video-effect video {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+#content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35%;
+    margin-right: 30%;
+    
+   
+}
+
+#content-container::after {
+    z-index: 3;
+    position: absolute;
+    top: -35.3vh;
+    right: -42%;
+    width: 100%;
+   background-color: transparent;
+}
+
+
+h2, h3, h4 {
+    position: relative;
+    top: -50px;
+    left: -50%;
+  z-index: 2;
+    font-family: sans-serif;
+    margin-bottom: -60px;
+    color: #fff;
+    font-size: 150px;
+    z-index: 4;
+}
+
+#sidebar {
+    
+    font-size: 60px;
+    position: relative;
+    margin-top: -18%;
+    left: 65%;
+    width: 100%; 
+    background-color: rgba(255, 0, 0, 0);
+    color: white; 
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 5px;
+}
+
+#sidebar ul li a {
+    top: -40px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+
+}
+
+#sidebar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    
+    background-color: rgb(255, 255, 255); 
+
+
+}
+
+#sidebar ul li a:hover::after {
+    transform: scaleX(1);
+
+
+}
+
+#sidebar ul li a:hover {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px; 
+    
+}
+@media (max-width: 768px) {
+    h2,
+    h3,
+    h4 {
+        display: none;
+        font-size: 100px;
+    }
+    #sidebar {
+        left: 26%;
+        position: relative;
+        font-size: 42px !important;
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+    .video-effect {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        top: 500px;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: 60px;
+    }
+
+    #sidebar {
+        font-size: 30px;
+    }
+}
